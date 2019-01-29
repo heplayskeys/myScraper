@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>myScraper</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        body {
+            background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/dust_scratches.png");
+        }
+
+        .article-entry {
+            margin: 0 auto 20px auto;
+            box-shadow: 0 8px 6px -6px #000000;
+            height: 275px;
+        }
+
+        .article-img:hover {
+            padding: 2px;
+            box-shadow: 0 8px 6px -6px #000000;
+            transition-property: padding, box-shadow;
+            transition-duration: 0.25s, 0.25s;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="border-bottom: 1px solid #ffffff">
+        <a class="navbar-brand" href="/">myScraper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#" style="padding-top: 16px">Home</a>
+                <a class="nav-item nav-link" href="/saved.html" style="padding-top: 16px">Saved Articles</a>
+                <a class="nav-item nav-link scrape-btn text-white"><button class="btn btn-md btn-danger">Scrape Articles</button></a>
+                <a id="clear-btn" class="nav-item nav-link text-dark"><button class="btn btn-md btn-light">Clear Articles</button></a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="row">
+        <div id="img-bg" class="col-md-12" style="height: 400px; background-image: url('https://img.freepik.com/free-vector/hand-drawn-cute-dogs-pattern-background_35322-179.jpg?size=338&ext=jpg'); width: 100%">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="col-md-12" style="padding: 0 500px">
+                <div class="card text-center border-dark bg-light" style="box-shadow: 0 8px 6px -6px #000000">
+                    <div class="card-body">
+                        <h1 class="card-title">myScraper</h1>
+                        <hr>
+                        <h5 class="card-text">Dog News Edition</h5>
+                        <br>
+                        <a class="btn btn-danger scrape-btn text-white">Scrape Articles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 bg-dark" style="height: 70px; border-top: 1px solid #ffffff; margin-bottom: 20px"></div>
+        <br>
+        <div class="container text-center">
+            <div class="col-md-12" style="height: 70px; margin-bottom: 15px">
+                <span class="badge" style="font-size: 25px; padding: 15px">Scraped Articles: <span id="numArticles" class="badge badge-secondary" style="font-size: 20px">0</span></span>
+            </div>
+        </div>
+
+        <div class="container" style="text-align: center">
+            <div id="articles-list" class="row">
+
+                <p style="width: 100%">There are currently no articles. Click &nbsp;<a class="btn btn-sm btn-danger scrape-btn text-white">Scrape Articles</a>&nbsp; to get started.</p>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
