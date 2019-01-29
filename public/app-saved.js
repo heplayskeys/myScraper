@@ -97,7 +97,6 @@ $(document).on("click", ".add-note", (e) => {
                         text: $("#noteBody").val().trim()  
                     }
                 }).then((response) => {
-                    alert("Note Updated");
                     $("#addNote").modal("toggle");
                     location.reload();
                 });
@@ -120,7 +119,6 @@ $(document).on("click", ".add-note", (e) => {
                     text: $("#noteBody").val().trim()   
                 }
             }).then((response) => {
-                alert("Note Added");
                 $("#addNote").modal("toggle");
                 location.reload();
             });
